@@ -1,0 +1,42 @@
+/* Accordion styles */
+details {
+    margin: 2em;
+}
+
+summary {
+    background: var(--orange);
+    color: white;
+    padding: 1em;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+details[open] summary {
+    /* Additional styles when the details are open */
+}
+
+details p,
+details ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    font-size: 1.7rem;
+}
+
+details[open] p,
+details[open] ul {
+    max-height: 600px;
+    /* Adjust this value as needed */
+}
+
+details ul {
+    list-style-type: none;
+}
+
+details ul li {
+    margin-bottom: 0.5em;
+}
+

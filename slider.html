@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        .container {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider {
+            position: absolute;
+            inset: 80px 200px 80px 80px;
+            background: #000;
+        }
+
+        .slider .slides {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 240px;
+            height: 320px;
+            background-size: cover;
+            background-position: center;
+            transition: 0.5s;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .buttons {
+            position: absolute;
+            bottom: 15px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .buttons span {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background-color: #111;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+        }
+
+        .buttons span::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-top: 4px solid #fff;
+            border-left: 4px solid #fff;
+            transform: rotate(150deg) translate(2px, 2px);
+        }
+
+        .buttons span:nth-child(2)::before {
+            transform: rotate(135deg) translate(2px 2px);
+        }
+
+        .buttons span:active {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider" id="slider">
+        </div>
+        <div class="buttons">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+    <script>
+        const images = [
+        "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811204/nalanda%20image/n91bp8fm0usrqc08ztd7.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811258/nalanda%20image/jp4gmnawrcdm8ycnjwdd.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811241/nalanda%20image/vopfzi6qjuwqkvjpgyjz.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811238/nalanda%20image/u0bj448bqzjn6bjc6d1c.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811233/nalanda%20image/tsjq6kcnlj53ltgwsyqh.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811225/nalanda%20image/b5lwdtlo7uhf6xor7jcc.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811222/nalanda%20image/c33f8ib9vuvpifu14feo.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811204/nalanda%20image/n91bp8fm0usrqc08ztd7.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811201/nalanda%20image/ptnxpupprk2yavry3nih.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811200/nalanda%20image/kjqrvxdjzcyuxklhjjoc.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811200/nalanda%20image/j44f4km5gkprmcgyteqq.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811200/nalanda%20image/j44f4km5gkprmcgyteqq.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811190/nalanda%20image/t47vbze2xw8ckaain1ac.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811189/nalanda%20image/svw32aeda9a2rlr1hamt.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811181/nalanda%20image/zwkrlfvnsflz3y6j2srf.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811180/nalanda%20image/obsa4ted3dsfhkbocxrn.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811162/nalanda%20image/spgjavpslrva3ghdfug9.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811160/nalanda%20image/ctspe7fs7gjtfvp6eo4d.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811156/nalanda%20image/j0rfp7thqvoididddcxg.jpg",
+    "https://res.cloudinary.com/dshrsnzyb/image/upload/v1715811138/nalanda%20image/gszcwjczbjiqy8zikpy3.jpg"
+        ];
+
+        const slider = document.getElementById("slider");
+
+        // Create slide elements dynamically
+        images.forEach((img, index) => {
+            const slide = document.createElement("div");
+            slide.classList.add("slides");
+            slide.style.backgroundImage = `url(${img})`;
+            slide.style.left = `calc(50px + ${index * 260}px)`;
+            slider.appendChild(slide);
+        });
+
+        let next = document.querySelector(".next");
+        let prev = document.querySelector(".prev");
+
+        next.addEventListener("click", function () {
+            let slides = document.querySelectorAll(".slides");
+            slider.appendChild(slides[0]);
+        });
+
+        prev.addEventListener("click", function () {
+            let slides = document.querySelectorAll(".slides");
+            slider.prepend(slides[slides.length - 1]);
+        });
+    </script>
+</body>
+
+</html>

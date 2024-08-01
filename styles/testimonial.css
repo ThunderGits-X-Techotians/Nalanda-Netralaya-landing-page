@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    box-sizing: border-box;
+}
+
+.testimonial-box {
+    position: relative;
+
+}
+
+
+
+.testimonial {
+    display: grid;
+    grid-template-rows: 1.3fr 0.3fr;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #ff995a 0%, #ffa84b 100%);
+    padding: 10px 20px;
+    position: relative;
+}
+
+.testimonial .fas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 25px;
+    color: #222;
+}
+
+.testimonial .testimonial-text {
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    padding: 25px 15px;
+    width: 100%;
+}
+
+.testimonial .testimonial-user {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial .testimonial-user .user-img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.testimonial .testimonial-user .user-info {
+    margin: 0 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.testimonial .testimonial-user .user-info .user-name {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.testimonial .testimonial-user .user-info .user-job-details {
+    margin: 5px 0 0 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonial .testimonial-user .user-info .user-job-details .line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #000;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.support {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.testimonial {
+    /* margin: 0 10px; */
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 400ms ease;
+}
+
+.testimonial a:hover {
+    color: #222;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.checked {
+    color: yellow;
+}
