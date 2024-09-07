@@ -114,7 +114,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--light-color);
+  /* background: var(--light-color); */
   max-height: 80px;
 }
 
@@ -147,6 +147,30 @@ section {
   margin-left: 2rem;
   transition: none;
 }
+
+/* new update */
+
+.dropdown-content{
+  position: absolute;
+  top:62px;
+  right: 0;
+  background-color: var(--light-color);
+  padding: 10px 5px;
+  display: none;
+
+}
+.dropbtn:hover .dropdown-content{
+  display:block;
+}
+
+.header .navbar .dropdown-content a{
+
+}
+
+
+
+
+/* new  update end */
 
 .header .navbar a:hover {
   border-bottom: 2px solid black;
