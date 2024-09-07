@@ -607,7 +607,24 @@ section {
     }
   }
   
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+
+    .home .content h3 {
+      color: #ff9a56ef;
+      font-size: 5rem;
+      margin: 0;
+      line-height: 3rem;
+  
+    }
+  
+    .home .content p {
+      margin: 0;
+      font-size: 2rem;
+    }
+  }
+  
+  
+  @media (max-width: 1050px){
     #menu-btn {
       display: initial;
     }
@@ -638,18 +655,5 @@ section {
       font-size: 2rem;
       display: block;
       margin: 2.5rem;
-    }
-  
-    .home .content h3 {
-      color: #ff9a56ef;
-      font-size: 5rem;
-      margin: 0;
-      line-height: 3rem;
-  
-    }
-  
-    .home .content p {
-      margin: 0;
-      font-size: 2rem;
     }
   }
