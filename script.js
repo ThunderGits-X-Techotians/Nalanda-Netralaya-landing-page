@@ -1,5 +1,6 @@
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.navbar');
+let header = document.querySelector('.header');
 
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
@@ -9,6 +10,7 @@ menu.onclick = () => {
 window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
+    header.classList.add('active');
 }
 
 
@@ -73,3 +75,86 @@ function carousel() {
     const carouselItem = createCarouselItem(url, isActive);
     carouselInner.appendChild(carouselItem);
   });
+
+
+
+
+
+
+
+
+  // Select all FAQ questions
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+console.log(faqQuestions);//returns nodelist
+
+// Add event listeners to each FAQ question
+faqQuestions.forEach((question) => {
+  question.addEventListener('click', () => {
+    // Toggle the 'active' class
+    question.classList.toggle('active');
+
+    // Find the related answer
+    const faqAnswer = question.nextElementSibling;
+
+    // Toggle the answer's max-height
+    if (question.classList.contains('active')) {
+      faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+    } else {
+      faqAnswer.style.maxHeight = 0;
+    }
+  });
+});
+
+
+
+
+
+
+// Get the "Book Now" button
+let bookNowBtn = document.getElementById("book-now-btn");
+
+// Get the pop-up element
+let popup = document.getElementById("booking-popup");
+
+// Get the close button inside the popup
+let closeBtn = document.querySelector(".close-btn");
+
+// When the user clicks the "Book Now" button, open the popup
+bookNowBtn.onclick = function() {
+  popup.style.display = "flex";  // Use flex to center the popup
+}
+
+// When the user clicks on the close button (X), close the popup
+closeBtn.onclick = function() {
+  popup.style.display = "none";
+}
+
+// When the user clicks outside the popup content, close the popup
+window.onclick = function(event) {
+  if (event.target == popup) {
+    popup.style.display = "none";
+  }
+}
+
+
+// get all the icons box
+
+// let icons = document.getElementsByClassName("icons");
+
+// console.log(icons);//returns html collection
+
+
+
+
+// Redirect to the service pages
+
+let icons = document.querySelectorAll('.icons');
+
+icons.forEach((icon, index) => {
+  icon.addEventListener('click', (event) => {
+    event.preventDefault();
+    // Redirect to the service page based on the index
+    window.location.href = `services/service${index + 1}.html`; 
+  });
+});
