@@ -1065,3 +1065,45 @@ form button.submit-btn:hover {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+
+/* Ayushman card */
+
+
+.ayushman-section {
+  background-color:white;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.ayushman-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ayushman-section .container p {
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+
+.ayushman-section ul, ol {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.ayushman-section ul li, ol li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+
+.ayushman-section .sub-head{
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
