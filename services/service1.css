@@ -47,7 +47,7 @@ h1,h2,h3,h4,h5{
 
 section {
   padding: 2rem 9%;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 }
 
 .light-bg {
@@ -154,9 +154,29 @@ section {
     color: var(--black);
     text-align: center;
     padding: 50px 20px;
-     /* background-image: url('https://img.freepik.com/free-photo/medium-shot-woman-getting-her-eyes-checked_23-2150801430.jpg?t=st=1725690796~exp=1725694396~hmac=70c57de1c8a3c61b583cda1bd44965dfc586d289abffc4d587c87629a4d6b992&w=996'); background-repeat: no-repeat;width:100%;background-size: cover; */
+   
+    /* background-image: url('https://img.freepik.com/free-photo/medium-shot-woman-getting-her-eyes-checked_23-2150801430.jpg?t=st=1725690796~exp=1725694396~hmac=70c57de1c8a3c61b583cda1bd44965dfc586d289abffc4d587c87629a4d6b992&w=996'); height: 80vh;background-repeat: no-repeat;width:100%;background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center; */
+
   }
 
+
+  /* .service-hero img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
+  } */
 
   .service-hero p{
     font-size: 16px;

@@ -239,6 +239,12 @@ section {
 
 
 
+
+
+   
+
+
+
    /* Phaco Surgery Description Section */
 
 .phaco-description-section {
@@ -364,7 +370,8 @@ section {
 
   /* Benefits of Phaco Surgery Section */
 .phaco-benefits-section {
-    padding: 80px 20px;
+    padding-inline: 20px;
+    padding-top: 80px;
     font-family: 'poppins', sans-serif;
     color: #333;
     text-align: center;
