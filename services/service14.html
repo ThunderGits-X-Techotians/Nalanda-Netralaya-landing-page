@@ -212,16 +212,15 @@
 
 
  navLinks.forEach((link) => {
-   link.addEventListener('click', function(event) {
-     event.preventDefault();
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
 
-     // Get the target section from the data attribute
-     const targetSection = this.getAttribute('data-target');
-     
-     // Redirect to index.html and target the specific section
-     window.location.href = `index.html#${targetSection}`;
-   });
- });
+    const targetSection = document.getAttribute('data-target');
+    
+   
+    window.location.href = `index.html#${targetSection}`;
+  });
+});
 
 
 
